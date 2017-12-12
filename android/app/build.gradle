@@ -80,8 +80,14 @@ android {
     }
 }
 
+repositories{
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+}
+
 dependencies {
-    compile(name:'cs-api-master-3310-debug', ext:'aar')
+    compile('com.contentsquare.android:library:1.0.0-SNAPSHOT'){
+        exclude group: 'com.android.support'
+    }
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:0.17.+"
