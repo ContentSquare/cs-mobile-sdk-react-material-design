@@ -85,7 +85,7 @@ repositories{
 }
 
 dependencies {
-    implementation('com.contentsquare.android:library:1.0.0-SNAPSHOT'){
+    implementation(project(':library')){
         exclude group: 'com.android.support'
     }
     implementation fileTree(dir: "libs", include: ["*.jar"])
