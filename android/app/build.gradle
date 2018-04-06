@@ -51,7 +51,7 @@ apply from: "react.gradle"
 
 android {
     compileSdkVersion 23
-    buildToolsVersion '26.0.2'
+    buildToolsVersion '27.0.3'
 
     defaultConfig {
         applicationId "com.demoapp"
@@ -85,10 +85,10 @@ repositories{
 }
 
 dependencies {
-    compile('com.contentsquare.android:library:1.0.0-SNAPSHOT'){
+    implementation('com.contentsquare.android:library:1.0.0-SNAPSHOT'){
         exclude group: 'com.android.support'
     }
-    compile fileTree(dir: "libs", include: ["*.jar"])
-    compile "com.android.support:appcompat-v7:23.0.1"
-    compile "com.facebook.react:react-native:0.17.+"
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "com.android.support:appcompat-v7:23.0.1"
+    implementation "com.facebook.react:react-native:0.17.+"
 }
